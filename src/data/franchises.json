@@ -1,0 +1,71 @@
+{
+    "franchises": [
+      {
+        "id": "star-trek-movies",
+        "name": "Star Trek (Movies)",
+        "orderModes": ["release"],
+        "entries": [
+          { "id": "st-m-01", "title": "Star Trek: The Motion Picture", "year": 1979, "type": "Movie" },
+          { "id": "st-m-02", "title": "Star Trek II: The Wrath of Khan", "year": 1982, "type": "Movie" },
+          { "id": "st-m-03", "title": "Star Trek III: The Search for Spock", "year": 1984, "type": "Movie" },
+          { "id": "st-m-04", "title": "Star Trek IV: The Voyage Home", "year": 1986, "type": "Movie" },
+          { "id": "st-m-05", "title": "Star Trek V: The Final Frontier", "year": 1989, "type": "Movie" },
+          { "id": "st-m-06", "title": "Star Trek VI: The Undiscovered Country", "year": 1991, "type": "Movie" },
+          { "id": "st-m-07", "title": "Star Trek: Generations", "year": 1994, "type": "Movie" },
+          { "id": "st-m-08", "title": "Star Trek: First Contact", "year": 1996, "type": "Movie" },
+          { "id": "st-m-09", "title": "Star Trek: Insurrection", "year": 1998, "type": "Movie" },
+          { "id": "st-m-10", "title": "Star Trek: Nemesis", "year": 2002, "type": "Movie" },
+          { "id": "st-m-11", "title": "Star Trek", "year": 2009, "type": "Movie" },
+          { "id": "st-m-12", "title": "Star Trek Into Darkness", "year": 2013, "type": "Movie" },
+          { "id": "st-m-13", "title": "Star Trek Beyond", "year": 2016, "type": "Movie" }
+        ]
+      },
+      {
+        "id": "marvel-infinity-saga",
+        "name": "Marvel (Infinity Saga – Movies)",
+        "orderModes": ["release"],
+        "entries": [
+          { "id": "mcu-01", "title": "Iron Man", "year": 2008, "type": "Movie" },
+          { "id": "mcu-02", "title": "The Incredible Hulk", "year": 2008, "type": "Movie" },
+          { "id": "mcu-03", "title": "Iron Man 2", "year": 2010, "type": "Movie" },
+          { "id": "mcu-04", "title": "Thor", "year": 2011, "type": "Movie" },
+          { "id": "mcu-05", "title": "Captain America: The First Avenger", "year": 2011, "type": "Movie" },
+          { "id": "mcu-06", "title": "The Avengers", "year": 2012, "type": "Movie" },
+          { "id": "mcu-07", "title": "Iron Man 3", "year": 2013, "type": "Movie" },
+          { "id": "mcu-08", "title": "Thor: The Dark World", "year": 2013, "type": "Movie" },
+          { "id": "mcu-09", "title": "Captain America: The Winter Soldier", "year": 2014, "type": "Movie" },
+          { "id": "mcu-10", "title": "Guardians of the Galaxy", "year": 2014, "type": "Movie" },
+          { "id": "mcu-11", "title": "Avengers: Age of Ultron", "year": 2015, "type": "Movie" },
+          { "id": "mcu-12", "title": "Ant-Man", "year": 2015, "type": "Movie" },
+          { "id": "mcu-13", "title": "Captain America: Civil War", "year": 2016, "type": "Movie" },
+          { "id": "mcu-14", "title": "Doctor Strange", "year": 2016, "type": "Movie" },
+          { "id": "mcu-15", "title": "Guardians of the Galaxy Vol. 2", "year": 2017, "type": "Movie" },
+          { "id": "mcu-16", "title": "Spider-Man: Homecoming", "year": 2017, "type": "Movie" },
+          { "id": "mcu-17", "title": "Thor: Ragnarok", "year": 2017, "type": "Movie" },
+          { "id": "mcu-18", "title": "Black Panther", "year": 2018, "type": "Movie" },
+          { "id": "mcu-19", "title": "Avengers: Infinity War", "year": 2018, "type": "Movie" },
+          { "id": "mcu-20", "title": "Ant-Man and the Wasp", "year": 2018, "type": "Movie" },
+          { "id": "mcu-21", "title": "Captain Marvel", "year": 2019, "type": "Movie" },
+          { "id": "mcu-22", "title": "Avengers: Endgame", "year": 2019, "type": "Movie" },
+          { "id": "mcu-23", "title": "Spider-Man: Far From Home", "year": 2019, "type": "Movie" }
+        ]
+      },
+      {
+        "id": "star-wars-skywalker-saga",
+        "name": "Star Wars (Skywalker Saga – Movies)",
+        "orderModes": ["release"],
+        "entries": [
+          { "id": "sw-01", "title": "Star Wars: Episode IV – A New Hope", "year": 1977, "type": "Movie" },
+          { "id": "sw-02", "title": "Star Wars: Episode V – The Empire Strikes Back", "year": 1980, "type": "Movie" },
+          { "id": "sw-03", "title": "Star Wars: Episode VI – Return of the Jedi", "year": 1983, "type": "Movie" },
+          { "id": "sw-04", "title": "Star Wars: Episode I – The Phantom Menace", "year": 1999, "type": "Movie" },
+          { "id": "sw-05", "title": "Star Wars: Episode II – Attack of the Clones", "year": 2002, "type": "Movie" },
+          { "id": "sw-06", "title": "Star Wars: Episode III – Revenge of the Sith", "year": 2005, "type": "Movie" },
+          { "id": "sw-07", "title": "Star Wars: Episode VII – The Force Awakens", "year": 2015, "type": "Movie" },
+          { "id": "sw-08", "title": "Star Wars: Episode VIII – The Last Jedi", "year": 2017, "type": "Movie" },
+          { "id": "sw-09", "title": "Star Wars: Episode IX – The Rise of Skywalker", "year": 2019, "type": "Movie" }
+        ]
+      }
+    ]
+  }
+  
