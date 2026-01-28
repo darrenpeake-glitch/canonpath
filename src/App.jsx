@@ -89,9 +89,19 @@ useEffect(() => {
   return (
     <div className="container">
       <header className="header">
-        <h1>CanonPath</h1>
-        <p className="muted">Pick a franchise. Track progress. Hit “Next Up”.</p>
-      </header>
+  <div className="titleRow">
+    <h1>CanonPath</h1>
+
+    <span className="badge" title="Current watch order">
+      {orderMode === "chronological" ? "Chronological Order" : "Release Order"}
+    </span>
+  </div>
+
+  <p className="muted">
+    Pick a franchise, track watched, and always know what’s next.
+  </p>
+</header>
+
 
       <section className="card">
         <FranchisePicker
