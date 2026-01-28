@@ -4,6 +4,12 @@
         "id": "star-trek-movies",
         "name": "Star Trek (Movies)",
         "orderModes": ["release"],
+        "orderModes": ["release", "chronological"],
+"orders": {
+  "release": ["st-m-01","st-m-02","st-m-03","st-m-04","st-m-05","st-m-06","st-m-07","st-m-08","st-m-09","st-m-10","st-m-11","st-m-12","st-m-13"],
+  "chronological": ["st-m-01","st-m-02","st-m-03","st-m-04","st-m-05","st-m-06","st-m-07","st-m-08","st-m-09","st-m-10","st-m-11","st-m-12","st-m-13"]
+},
+
         "entries": [
           { "id": "st-m-01", "title": "Star Trek: The Motion Picture", "year": 1979, "type": "Movie" },
           { "id": "st-m-02", "title": "Star Trek II: The Wrath of Khan", "year": 1982, "type": "Movie" },
@@ -23,7 +29,12 @@
       {
         "id": "marvel-infinity-saga",
         "name": "Marvel (Infinity Saga – Movies)",
-        "orderModes": ["release"],
+        "orderModes": ["release", "chronological"],
+"orders": {
+  "release": ["mcu-01","mcu-02","mcu-03","mcu-04","mcu-05","mcu-06","mcu-07","mcu-08","mcu-09","mcu-10","mcu-11","mcu-12","mcu-13","mcu-14","mcu-15","mcu-16","mcu-17","mcu-18","mcu-19","mcu-20","mcu-21","mcu-22","mcu-23"],
+  "chronological": ["mcu-01","mcu-02","mcu-03","mcu-04","mcu-05","mcu-06","mcu-07","mcu-08","mcu-09","mcu-10","mcu-11","mcu-12","mcu-13","mcu-14","mcu-15","mcu-16","mcu-17","mcu-18","mcu-19","mcu-20","mcu-21","mcu-22","mcu-23"]
+},
+
         "entries": [
           { "id": "mcu-01", "title": "Iron Man", "year": 2008, "type": "Movie" },
           { "id": "mcu-02", "title": "The Incredible Hulk", "year": 2008, "type": "Movie" },
@@ -53,7 +64,12 @@
       {
         "id": "star-wars-skywalker-saga",
         "name": "Star Wars (Skywalker Saga – Movies)",
-        "orderModes": ["release"],
+        "orderModes": ["release", "chronological"],
+"orders": {
+  "release": ["sw-01","sw-02","sw-03","sw-04","sw-05","sw-06","sw-07","sw-08","sw-09"],
+  "chronological": ["sw-04","sw-05","sw-06","sw-01","sw-02","sw-03","sw-07","sw-08","sw-09"]
+},
+
         "entries": [
           { "id": "sw-01", "title": "Star Wars: Episode IV – A New Hope", "year": 1977, "type": "Movie" },
           { "id": "sw-02", "title": "Star Wars: Episode V – The Empire Strikes Back", "year": 1980, "type": "Movie" },

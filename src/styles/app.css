@@ -98,3 +98,26 @@ button.secondary { background: transparent; }
 .searchRow {
   margin-top: 12px;
 }
+
+.orderRow {
+  margin-top: 12px;
+}
+
+.segmented {
+  display: flex;
+  gap: 10px;
+}
+
+.seg,
+.segActive {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.segActive {
+  background: #0f1117;
+}

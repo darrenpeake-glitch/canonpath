@@ -10,6 +10,11 @@ function storageKey(franchiseId) {
   return `canonpath.watched.${franchiseId}`;
 }
 
+function orderKey(franchiseId) {
+  return `canonpath.order.${franchiseId}`;
+}
+
+
 export default function App() {
   const franchises = data.franchises;
   const [selectedId, setSelectedId] = useState(franchises[0].id);
@@ -23,11 +28,26 @@ export default function App() {
 
   const [watched, setWatched] = useState({});
   const [query, setQuery] = useState("");
+  const [orderMode, setOrderMode] = useState("release");
 
-  useEffect(() => {
-    const raw = localStorage.getItem(storageKey(selected.id));
-    setWatched(raw ? JSON.parse(raw) : {});
-  }, [selected.id]);
+
+useEffect(() => {
+  // load watched per-franchise
+  const raw = localStorage.getItem(storageKey(selected.id));
+  setWatched(raw ? JSON.parse(raw) : {});
+
+  // load order mode per-franchise
+  const rawOrder = localStorage.getItem(orderKey(selected.id));
+  const allowed = selected.orderModes ?? ["release"];
+  const next =
+    rawOrder && allowed.includes(rawOrder)
+      ? rawOrder
+      : (allowed[0] ?? "release");
+  setOrderMode(next);
+}, [selected.id, selected.orderModes]);
+useEffect(() => {
+  localStorage.setItem(orderKey(selected.id), orderMode);
+}, [selected.id, orderMode]);
 
   useEffect(() => {
     localStorage.setItem(storageKey(selected.id), JSON.stringify(watched));
@@ -37,15 +57,28 @@ export default function App() {
     setWatched((prev) => ({ ...prev, [entryId]: !prev[entryId] }));
   }
 
+  const orderedEntries = useMemo(() => {
+  const entries = selected.entries ?? [];
+  const orders = selected.orders ?? {};
+  const ids = orders[orderMode];
+
+  if (!Array.isArray(ids) || ids.length === 0) return entries;
+
+  const byId = new Map(entries.map((e) => [e.id, e]));
+  return ids.map((id) => byId.get(id)).filter(Boolean);
+}, [selected, orderMode]);
+
+
   const filteredEntries = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return selected.entries;
-  
-    return selected.entries.filter((e) => {
-      const hay = `${e.title} ${e.year} ${e.type}`.toLowerCase();
-      return hay.includes(q);
-    });
-  }, [selected.entries, query]);
+  const q = query.trim().toLowerCase();
+  if (!q) return orderedEntries;
+
+  return orderedEntries.filter((e) => {
+    const hay = `${e.title} ${e.year} ${e.type}`.toLowerCase();
+    return hay.includes(q);
+  });
+}, [orderedEntries, query]);
+
   
   function markAll(value) {
     const next = {};
@@ -69,6 +102,30 @@ export default function App() {
         <div className="searchRow">
   <label className="label">
     Search
+<div className="orderRow">
+  <div className="muted" style={{ marginBottom: 6 }}>
+    Order
+  </div>
+
+  <div className="segmented">
+    <button
+      type="button"
+      className={orderMode === "release" ? "segActive" : "seg"}
+      onClick={() => setOrderMode("release")}
+    >
+      Release
+    </button>
+
+    <button
+      type="button"
+      className={orderMode === "chronological" ? "segActive" : "seg"}
+      onClick={() => setOrderMode("chronological")}
+    >
+      Chronological
+    </button>
+  </div>
+</div>
+
     <input
       className="input"
       value={query}
@@ -105,8 +162,7 @@ export default function App() {
 
         <div className="card">
           <NextUp 
-            entries={filteredEntries}
-            watched={watched} />
+            entries={filteredEntries} watched={watched} />
         </div>
       </section>
 
