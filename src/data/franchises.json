@@ -26,15 +26,14 @@
           { "id": "st-m-13", "title": "Star Trek Beyond", "year": 2016, "type": "Movie" }
         ]
       },
-      {
+            {
         "id": "marvel-infinity-saga",
         "name": "Marvel (Infinity Saga – Movies)",
         "orderModes": ["release", "chronological"],
-"orders": {
-  "release": ["mcu-01","mcu-02","mcu-03","mcu-04","mcu-05","mcu-06","mcu-07","mcu-08","mcu-09","mcu-10","mcu-11","mcu-12","mcu-13","mcu-14","mcu-15","mcu-16","mcu-17","mcu-18","mcu-19","mcu-20","mcu-21","mcu-22","mcu-23"],
-  "chronological": ["mcu-01","mcu-02","mcu-03","mcu-04","mcu-05","mcu-06","mcu-07","mcu-08","mcu-09","mcu-10","mcu-11","mcu-12","mcu-13","mcu-14","mcu-15","mcu-16","mcu-17","mcu-18","mcu-19","mcu-20","mcu-21","mcu-22","mcu-23"]
-},
-
+        "orders": {
+          "release": ["mcu-01","mcu-02","mcu-03","mcu-04","mcu-05","mcu-06","mcu-07","mcu-08","mcu-09","mcu-10","mcu-11","mcu-12","mcu-13","mcu-14","mcu-15","mcu-16","mcu-17","mcu-18","mcu-19","mcu-20","mcu-21","mcu-22","mcu-23"],
+          "chronological": ["mcu-05","mcu-21","mcu-01","mcu-03","mcu-02","mcu-04","mcu-06","mcu-08","mcu-07","mcu-09","mcu-10","mcu-15","mcu-11","mcu-12","mcu-13","mcu-20","mcu-14","mcu-18","mcu-16","mcu-17","mcu-19","mcu-22","mcu-23"]
+        },
         "entries": [
           { "id": "mcu-01", "title": "Iron Man", "year": 2008, "type": "Movie" },
           { "id": "mcu-02", "title": "The Incredible Hulk", "year": 2008, "type": "Movie" },
