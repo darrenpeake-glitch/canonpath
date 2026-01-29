@@ -14,12 +14,18 @@ function orderKey(franchiseId) {
   return `canonpath.order.${franchiseId}`;
 }
 
+function franchiseKey() {
+  return "canonpath.franchise";
+}
+
 
 export default function App() {
   const franchises = data.franchises;
-  const [selectedId, setSelectedId] = useState(franchises[0].id);
- 
-
+  const [selectedId, setSelectedId] = useState(() => {
+  const saved = localStorage.getItem(franchiseKey());
+  const valid = franchises.some((f) => f.id === saved);
+  return valid ? saved : franchises[0].id;
+});
 
   const selected = useMemo(
     () => franchises.find((f) => f.id === selectedId) ?? franchises[0],
@@ -48,6 +54,10 @@ useEffect(() => {
 useEffect(() => {
   localStorage.setItem(orderKey(selected.id), orderMode);
 }, [selected.id, orderMode]);
+
+useEffect(() => {
+  localStorage.setItem(franchiseKey(), selectedId);
+}, [selectedId]);
 
   useEffect(() => {
     localStorage.setItem(storageKey(selected.id), JSON.stringify(watched));
